@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aurion — Documentation</title>
+  <meta name="description" content="Aurion — open-source music player documentation" />
+  <link rel="icon" href="img/favicon.ico" />
+
+  <!-- Prism for code highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <!-- Optional icon font (GitHub icon) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app" class="site">
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <img src="img/logo.svg" alt="Aurion logo" class="logo" onerror="this.style.display='none'"/>
+          <a href="/" class="title" data-link> Aurion </a>
+          <span class="tagline">Open-source music player with downloads</span>
+        </div>
+
+        <div class="header-actions">
+          <input id="search-input" placeholder="Search docs..." aria-label="Search docs" />
+          <button id="dark-toggle" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+          <a class="button button-primary" href="#/downloads" data-link>Download</a>
+          <button id="burger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container layout">
+      <aside id="sidebar" class="sidebar">
+        <nav id="sidebar-nav" class="sidebar-nav" aria-label="Documentation">
+          <!-- Sidebar links populated by JS -->
+        </nav>
+
+        <div class="sidebar-footer">
+          <small>Version: <strong id="site-version">unreleased</strong></small>
+          <a class="link" href="https://github.com/GoldenLobster/Aurion" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </aside>
+
+      <main id="content" class="content" tabindex="-1" role="main">
+        <!-- Content loaded here -->
+        <div id="page-root" class="page-root">
+          <div class="loading">Loading documentation…</div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Aurion</strong> — open-source music player. <small>Built with ♥</small>
+        </div>
+        <div class="footer-links">
+          <a href="#/contributing" data-link>Contributing</a>
+          <a href="#/changelog" data-link>Changelog</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search results container -->
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+
+  <!-- Libraries -->
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
